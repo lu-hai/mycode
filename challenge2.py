@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-import pprint
 import random
 
 import requests
@@ -23,13 +22,14 @@ def main():
     correct_answer = trivia.get('results')[random.randint(0, int(amount) - 1)]["correct_answer"]
     incorrect_answers = trivia.get('results')[random.randint(0, int(amount) - 1)]["incorrect_answers"]
     
-    multi_select = incorrect_answers
-    multi_select.append(correct_answer)
-    multi_select = random.shuffle(multi_select)
+    #multi_select = incorrect_answers
+    #multi_select.append(correct_answer)
+    #multi_select = random.shuffle(multi_select)
     
-    print(f"Available answers: {multi_select}")
-    print("Select your answer:")
-    answer = input(">>>")
+    #print(multi_select)
+    #print(f"Available answers: {multi_select}")
+    #print("Select your answer:")
+    #answer = input(">>>")
 
     print(f"Correct answer is: {correct_answer}")
     #print(f"Incorrect answers are: {incorrect_answers}")
